@@ -5,80 +5,177 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Дарья Солодовникова — портфолио</title>
 <meta name="description" content="Портфолио и резюме Дарьи Солодовниковой">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
 <style>
+  :root {
+    --black: #000;
+    --panel: #141014;
+    --pink: #ff4fa3;
+    --pink-soft: #ffb8d9;
+    --text: #f6f1f4;
+    --muted: #b9a9b2;
+  }
+  * { box-sizing: border-box; }
   body {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 40px 20px 60px;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    background: var(--black);
+    color: var(--text);
+    font-family: "Onest", system-ui, sans-serif;
     font-size: 1.0625rem;
     line-height: 1.6;
-    color: #222;
-    background: #fff;
   }
-  h1 { font-size: 2rem; margin: 0 0 4px; }
-  h2 { font-size: 1.3rem; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid #ddd; }
-  h3 { font-size: 1.05rem; margin: 16px 0 2px; }
-  p, ul { margin: 0 0 12px; }
-  ul { padding-left: 1.2em; }
-  a { color: #1a56db; }
-  a:focus-visible { outline: 3px solid #1a56db; outline-offset: 2px; }
-  .subtitle { color: #555; margin-bottom: 12px; }
-  .contacts a { margin-right: 16px; }
-  .when { color: #666; font-size: .95rem; margin: 0; }
+  a { color: var(--pink-soft); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  /* hero */
+  .hero { padding: 72px 0 48px; position: relative; overflow: hidden; }
+  .hero h1 {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.5rem, 10.5vw, 6.2rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin: 0 0 28px;
+    color: var(--pink);
+    overflow-wrap: anywhere;
+  }
+  .hero h1 span { display: block; color: var(--text); }
+  .sticker {
+    display: inline-block;
+    transform: rotate(-3deg);
+    background: var(--pink);
+    color: var(--black);
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin: 0 0 28px;
+  }
+  .contacts { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; }
+  .contacts a {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 2px solid var(--pink);
+    border-radius: 999px;
+    color: var(--pink);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .15s, color .15s;
+  }
+  .contacts a:hover { background: var(--pink); color: var(--black); }
+
+  /* sections */
+  section { padding: 24px 0; }
+  h2 {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 0 0 18px;
+    color: var(--pink);
+  }
+  h3 { font-size: 1.1rem; margin: 0 0 2px; }
+  p { margin: 0 0 12px; max-width: 40em; }
+  .when { color: var(--muted); font-size: .95rem; margin: 0 0 6px; }
+
+  .about { font-size: 1.25rem; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+  .card { background: var(--panel); border: 2px solid var(--pink); border-radius: 18px; padding: 20px; }
+  .card h3 { color: var(--pink-soft); margin-bottom: 12px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .tags li { border: 1px solid var(--pink-soft); border-radius: 999px; padding: 3px 14px; font-size: .98rem; }
+
+  .timeline { list-style: none; margin: 0; padding: 0 0 0 28px; border-left: 3px solid var(--pink); }
+  .timeline li { position: relative; padding-bottom: 26px; }
+  .timeline li:last-child { padding-bottom: 0; }
+  .timeline li::before {
+    content: ""; position: absolute; left: -39px; top: 7px; width: 15px; height: 15px;
+    background: var(--black); border: 3px solid var(--pink); border-radius: 50%;
+  }
+
+  .awards { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .awards li { background: var(--panel); border-left: 6px solid var(--pink); border-radius: 0 14px 14px 0; padding: 14px 18px; max-width: 40em; }
+
+  footer { margin-top: 40px; padding: 36px 0 56px; border-top: 2px solid var(--pink); }
+  footer p { margin: 0; font-size: 1.2rem; }
+  footer a { color: var(--pink); font-weight: 600; }
+
+  @media (max-width: 560px) { .hero { padding: 48px 0 32px; } body { font-size: 1rem; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>Дарья Солодовникова</h1>
-  <p class="subtitle">Студентка первого курса НИУ ВШЭ в Санкт-Петербурге</p>
-  <p class="contacts">
-    <a href="mailto:disolodovnikova@edu.hse.ru">Почта</a>
-    <a href="https://github.com/dadadaxxx">GitHub</a>
-    <a href="https://t.me/dashulyyyx">Telegram</a>
-  </p>
+<header class="hero">
+  <div class="wrap">
+    <h1>Дарья <span>Солодовникова</span></h1>
+    <p class="sticker">1 курс, НИУ ВШЭ, Санкт-Петербург</p>
+    <ul class="contacts">
+      <li><a href="mailto:disolodovnikova@edu.hse.ru">Почта</a></li>
+      <li><a href="https://github.com/dadadaxxx">GitHub</a></li>
+      <li><a href="https://t.me/dashulyyyx">Telegram</a></li>
+    </ul>
+  </div>
 </header>
 
-<main>
+<main class="wrap">
+
   <section>
     <h2>Обо мне</h2>
-    <p>Учусь на первом курсе НИУ ВШЭ в Санкт-Петербурге, программа ПАДИИ. Осваиваю алгоритмы, математику и программирование.</p>
+    <p class="about">Учусь на первом курсе НИУ ВШЭ в Санкт-Петербурге, программа ПАДИИ. Осваиваю алгоритмы, математику и программирование.</p>
     <p>Языки: русский, английский (B1).</p>
   </section>
 
   <section>
     <h2>Навыки</h2>
-    <ul>
-      <li>Языки программирования: C++, Python</li>
-      <li>Инструменты: GitHub, LaTeX</li>
-      <li>Прочее: алгоритмы и структуры данных, математика, командная работа</li>
-    </ul>
+    <div class="cards">
+      <div class="card">
+        <h3>Языки программирования</h3>
+        <ul class="tags"><li>C++</li><li>Python</li></ul>
+      </div>
+      <div class="card">
+        <h3>Инструменты</h3>
+        <ul class="tags"><li>GitHub</li><li>LaTeX</li></ul>
+      </div>
+      <div class="card">
+        <h3>Прочее</h3>
+        <ul class="tags"><li>Алгоритмы и структуры данных</li><li>Математика</li><li>Командная работа</li></ul>
+      </div>
+    </div>
   </section>
 
   <section>
     <h2>Образование и опыт</h2>
-    <h3>НИУ ВШЭ, Санкт-Петербург</h3>
-    <p class="when">2026 — настоящее время</p>
-    <p>Бакалавриат, программа ПАДИИ, 1 курс. Изучаю алгоритмы, математический анализ, алгебру, дискретную математику и C++.</p>
-
-    <h3>Лицей № 2, Астрахань</h3>
-    <p class="when">выпуск 2026</p>
-    <p>Окончила лицей, сдала ЕГЭ с суммой баллов 292.</p>
+    <ol class="timeline">
+      <li>
+        <h3>НИУ ВШЭ, Санкт-Петербург</h3>
+        <p class="when">2026 — настоящее время</p>
+        <p>Бакалавриат, программа ПАДИИ, 1 курс. Изучаю алгоритмы, математический анализ, алгебру, дискретную математику и C++.</p>
+      </li>
+      <li>
+        <h3>Лицей № 2, Астрахань</h3>
+        <p class="when">выпуск 2026</p>
+        <p>Окончила лицей, сдала ЕГЭ с суммой баллов 292.</p>
+      </li>
+    </ol>
   </section>
 
   <section>
     <h2>Достижения</h2>
-    <ul>
-      <li>Поступила в НИУ ВШЭ на программу ПАДИИ по олимпиаде «Формула Единства» (2 уровень), 2026.</li>
-      <li>Сумма баллов ЕГЭ — 292.</li>
+    <ul class="awards">
+      <li>Поступила в НИУ ВШЭ на программу ПАДИИ, 2026.</li>
+      <li>Победитель и призёр перечневых олимпиад по математике: «Формула Единства», «Газпром».</li>
     </ul>
   </section>
+
 </main>
 
 <footer>
-  <h2>Контакты</h2>
-  <p>Почта: <a href="mailto:disolodovnikova@edu.hse.ru">disolodovnikova@edu.hse.ru</a></p>
+  <div class="wrap">
+    <p>Напишите мне: <a href="mailto:disolodovnikova@edu.hse.ru">disolodovnikova@edu.hse.ru</a></p>
+  </div>
 </footer>
 
 </body>
